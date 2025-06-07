@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build --base=./",
+    "build": "vite build --base=./",
     "preview": "vite preview",
-    "predeploy" : "pnpm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d dist -f"
   },
   "devDependencies": {
     "sass": "^1.86.0",
