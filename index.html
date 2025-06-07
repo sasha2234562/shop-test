@@ -1,15 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sass Project</title>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>shop-test</title>
+    <link rel="stylesheet" href="/styles/main.css">
     <script type="module" src="/src/main.js" defer></script>
-  </head>
-  <body>
-    <main class="container">
-      <h1>Hello, Sass!</h1>
-      <p>This is a simple example of using Sass with HTML.</p>
-    </main>
-  </body>
+</head>
+<body>
+<header class="header">
+    <div class="header__container">
+        <img src="/src/images/logo.svg" alt="logo">
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav__item"><a href="#" class="header__nav-link header__nav-active">Бизнес</a></li>
+                <li class="header__nav__item"><a href="#" class="header__nav-link">О нас</a></li>
+                <li class="header__nav__item"><a href="#" class="header__nav-link">Цены</a></li>
+                <li class="header__nav__item"><a href="#" class="header__nav-link">Оформить заказ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="main">
+    <section class="section_info">
+        <div class="section_info__container">
+            <div class="section__content">
+                <h1 class="section__title">Lorem ipsum dolor sit <br/> ametconsectetur adipiscing</h1>
+                <div class="section__list-wrapper">
+                    <h4 class="section__list-title">At vero eos et accusamus et iusto odio dignissimos ducimus!</h4>
+                    <ul class="section__list">
+                        <li class="section__list-item">Totam rem aperiam eaque ipsa</li>
+                        <li class="section__list-item">Sit voluptatem accusantium doloremque laudantium</li>
+                        <li class="section__list-item">Sed ut perspiciatis, unde omnis iste natus error</li>
+                    </ul>
+                </div>
+                <div class="section__buttons">
+                    <button class="button button--order">Заказать</button>
+                    <button class="button button--details">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section__order">
+        <div class="order__container">
+            <div class="order__title__wrapper">
+                <h3 class="order__title">Оформление <span>Заказа</span></h3>
+                <p class="order__info">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+            </div>
+            <div class="order__possibilities"></div>
+            <form class="order__container__form">
+                <div class="order__container__form__inputs__wrapper">
+                    <label>
+                        <select class="order__container__form__select" name="select">
+                            <option value="" selected disabled>Выберите тип системы</option>
+                        </select>
+                    </label>
+                    <label>
+                        <input type="text" class="order__container__form__select" placeholder="Ваш e-mail"
+                               name="e_mail">
+                    </label>
+                    <label>
+                        <input type="text" class="order__container__form__select" placeholder="Ваше имя" name="name">
+                    </label>
+                </div>
+                <div class="order__container__form__inputs__wrapper">
+                    <div class="order__container__form__slider">
+                        <span class="order__container__form__slider-percentage">0%</span>
+                        <div class="order__container__form__slider-track">
+                            <div class="order__container__form__slider-thumb"></div>
+                        </div>
+                    </div>
+                    <label class='input__file'>
+                        <input type="file" name="file"/>
+                        <span class="input__file__btn">
+                        <img src="src/images/btn-file.svg" alt="btn-file"/>
+                        <span>Прикрепить файл</span></span>
+                    </label>
+                </div>
+                <button type="submit" class="order__container__form__submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer__container">
+        <p class="footer__copyright">© 2018 «LoremIpsum.net» Все права защищены.</p>
+        <nav class="footer__nav">
+            <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                    <img src="/src/images/networks/qiwi.svg" alt="Qiwi" class="footer__nav-icon">
+                    <a href="#" class="footer__nav-link">Qiwi wallet</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+<script src="src/main.js"></script>
+</body>
 </html>

@@ -1,0 +1,62 @@
+@use 'variables' as *;
+
+.order__possibilities {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__container__icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 210px;
+  }
+
+  &__text {
+    position: absolute;
+    width: 190px;
+    top: calc(100% + 20px);
+    color: $text-color;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+  }
+
+  &__wrapper__icon {
+    border: 5px solid $dark-blue;
+    background: $blue-accent;
+    padding: 34px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .order__possibilities {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .order__possibilities__wrapper__icon {
+    padding: 14px;
+  }
+
+  .order__possibilities__icon {
+    height: 10px;
+    width: 10px;
+  }
+
+  .order__possibilities__text {
+    position: relative;
+    top: auto;
+  }
+}

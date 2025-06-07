@@ -1,0 +1,87 @@
+@use 'variables' as *;
+
+
+.main {
+  width: 100%;
+  max-width: $max-width;
+  position: relative;
+}
+
+.section_info {
+  background-image: url("/src/images/background-section1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: fit-content;
+
+  &__container {
+    height: fit-content;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+.section {
+  &__content {
+    max-width: $section-content-width;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 5vw, 80px);
+    padding: clamp(150px, 10vw, 150px) 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: clamp(20px, 5vw, 58px);
+    text-align: left;
+    text-transform: uppercase;
+    color: $blue-accent;
+    text-wrap: wrap;
+    font-size: clamp(20px, 4vw, 48px);
+  }
+
+  &__list-title {
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+  }
+
+  &__list-item {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &:before {
+      content: "-";
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  }
+
+  &__list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .section__content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section__buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

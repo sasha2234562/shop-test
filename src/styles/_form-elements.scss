@@ -1,0 +1,63 @@
+@use 'variables' as *;
+
+.order__form {
+  &__select {
+    border: 1px solid $text-color;
+    border-radius: 3px;
+    padding: 10px;
+    background: $form-bg;
+    color: $form-text;
+    font-size: 18px;
+    width: 100%;
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    &-track {
+      width: 100%;
+      height: 4px;
+      background-color: $slider-bg;
+      border-radius: 2px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    &-thumb {
+      width: 20px;
+      height: 20px;
+      background-color: $slider-thumb;
+      border-radius: 50%;
+      position: absolute;
+      top: -8px;
+      left: 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    &-percentage {
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      color: $form-bg;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+  }
+
+  &__submit {
+    border: 1px solid $text-color;
+    border-radius: 4px;
+    padding: 15px 10px;
+    background: $blue-accent;
+    max-width: 370px;
+    width: 100%;
+    margin: 10px auto 0;
+  }
+}
